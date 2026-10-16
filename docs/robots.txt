@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://casanovanjpa.com/sitemap.xml
