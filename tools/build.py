@@ -126,6 +126,7 @@ def footer():
         <li><a href="{{{{link:openhouse-waitlist-sign-up/}}}}">Open House app for agents</a></li>
         <li><a href="{{{{link:}}}}#faq">FAQ</a></li>
         <li><a href="{{{{link:privacy/}}}}">Privacy policy</a></li>
+        <li><a href="#" data-cookie-open>Cookie choices</a></li>
       </ul></div>
       <div><h4>Follow</h4><ul>{social}</ul></div>
     </div>

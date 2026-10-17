@@ -51,6 +51,7 @@
   if (banner) {
     $("#cookie-yes").addEventListener("click", function () { store.set("cg-cookies", "yes"); banner.hidden = true; loadAnalytics(); });
     $("#cookie-no").addEventListener("click", function () { store.set("cg-cookies", "no"); banner.hidden = true; });
+    $$("[data-cookie-open]").forEach(function (a) { a.addEventListener("click", function (e) { e.preventDefault(); banner.hidden = false; }); });
   }
 
   /* ---- Video: load YouTube only when asked ------------------------------- */
