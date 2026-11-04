@@ -281,6 +281,8 @@ p { margin: 0; }
 .form-status { font-weight: 600; font-size: .95rem; min-height: 1.4em; }
 .form-status.ok { color: var(--ok); } .form-status.err { color: var(--bad); }
 .hp { position: absolute; left: -9999px; }
+.check { display: flex; gap: .6rem; align-items: flex-start; font-size: .9rem; color: var(--ink-soft); line-height: 1.4; }
+.check input { margin-top: .2rem; width: 1.05rem; height: 1.05rem; accent-color: var(--brass); flex: none; }
 
 /* Blog */
 .post-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 1.5rem; }
@@ -303,6 +305,8 @@ p { margin: 0; }
 /* Feature (guide / open house) */
 .feature { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(2rem, 5vw, 4rem); align-items: center; }
 @media (max-width: 860px) { .feature { grid-template-columns: 1fr; } }
+.only-narrow { display: none; }
+@media (max-width: 860px) { .btn-row.only-narrow { display: flex; } }
 .feature .arch { aspect-ratio: 4 / 5; max-width: 420px; justify-self: center; width: 100%; }
 .checklist { list-style: none; padding: 0; margin: 0; display: grid; gap: .7rem; }
 .checklist li { position: relative; padding-left: 1.8rem; }

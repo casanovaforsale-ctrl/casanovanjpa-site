@@ -10,6 +10,9 @@
     // the contact form by email. Left empty, the form opens the visitor's
     // email app with the message filled in instead.
     formspreeId: "",
+    // Meta (Facebook) Pixel ID from Events Manager, for measuring ads. It
+    // loads only after a visitor accepts cookies. Leave empty to turn it off.
+    metaPixelId: "",
     email: "casanovaforsale@gmail.com"
   };
 
@@ -32,7 +35,20 @@
   }
 
   /* ---- Analytics, only after the visitor accepts -------------------------- */
+  function loadPixel() {
+    if (!CONFIG.metaPixelId || window.fbq) return;
+    var n = window.fbq = function () { if (n.callMethod) n.callMethod.apply(n, arguments); else n.queue.push(arguments); };
+    if (!window._fbq) window._fbq = n;
+    n.push = n; n.loaded = true; n.version = "2.0"; n.queue = [];
+    var px = document.createElement("script");
+    px.async = true;
+    px.src = "https://connect.facebook.net/en_US/fbevents.js";
+    document.head.appendChild(px);
+    window.fbq("init", CONFIG.metaPixelId);
+    window.fbq("track", "PageView");
+  }
   function loadAnalytics() {
+    loadPixel();
     if (!CONFIG.gaId || window.__gaLoaded) return;
     window.__gaLoaded = true;
     var s = document.createElement("script");
@@ -168,6 +184,34 @@
       }
     });
   }
+
+  /* ---- Guide signup: posts straight to the Open House app ---------------- */
+  // The form submits normally (no fetch), so the visitor lands on the app's
+  // thank-you page with the guide. This only tags where they came from and,
+  // when cookies were accepted, records the lead for analytics and ads.
+  $$("form[data-lead-form]").forEach(function (lead) {
+    var src = $("[data-src-field]", lead);
+    if (src && window.URLSearchParams) {
+      var q = new URLSearchParams(window.location.search);
+      // The app accepts up to 40 letters, digits, spaces, hyphens and dots.
+      var clean = function (v, n) { return (v || "").toLowerCase().replace(/[^a-z0-9.-]/g, "").slice(0, n); };
+      var tag = clean(q.get("utm_source") || q.get("src"), 12), camp = clean(q.get("utm_campaign"), 14);
+      if (tag) src.value += "-" + tag;
+      if (camp) src.value += "-" + camp;
+      src.value = src.value.slice(0, 40);
+    }
+    var sent = false;
+    lead.addEventListener("submit", function (e) {
+      if (sent) return;
+      if (!lead.checkValidity()) { e.preventDefault(); lead.reportValidity(); return; }
+      if (!window.fbq && !window.gtag) return;
+      e.preventDefault();
+      sent = true;
+      try { if (window.fbq) window.fbq("track", "Lead", { content_name: "First-time buyer guide" }); } catch (err) {}
+      try { if (window.gtag) window.gtag("event", "generate_lead", { form: "first-time-buyer-guide" }); } catch (err) {}
+      setTimeout(function () { lead.submit(); }, 350);
+    });
+  });
 
   /* ---- Footer year -------------------------------------------------------- */
   $$("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
