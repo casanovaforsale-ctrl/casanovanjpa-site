@@ -93,7 +93,7 @@ def header(current):
   </div></div>
   <nav class="wrap nav" aria-label="Main">
     <a class="brand" href="{{{{link:}}}}">
-      <img src="{{{{root}}}}assets/img/logo.webp" alt="" width="46" height="39">
+      <img src="{{{{root}}}}assets/img/logo.webp" alt="" width="44" height="44">
       <span><span class="brand-name">Casanova Group</span><span class="brand-sub">Nicholas Rodriguez Jr. · Realtor</span></span>
     </a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
