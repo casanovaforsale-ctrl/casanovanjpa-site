@@ -112,7 +112,7 @@ p { margin: 0; }
 .topline a:hover { color: var(--brass-soft); }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: .7rem; }
 .brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; color: var(--ink); min-width: 0; }
-.brand img { width: 46px; height: 39px; object-fit: contain; }
+.brand img { width: 44px; height: 44px; object-fit: contain; }
 .brand-name { font-family: var(--wordmark); font-size: 1.45rem; line-height: 1; letter-spacing: .02em; white-space: nowrap; }
 .brand-sub { display: block; overflow: hidden; text-overflow: ellipsis; font-family: var(--mono); font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--mute); margin-top: .3rem; }
 .nav-links { display: flex; align-items: center; gap: 1.4rem; list-style: none; margin: 0; padding: 0; }
