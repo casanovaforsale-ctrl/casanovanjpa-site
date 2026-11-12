@@ -521,3 +521,10 @@ p { margin: 0; }
   .keytag, .keytag:hover { animation: none; rotate: 0deg; }
   .keytag-inner { transition: none; }
 }
+
+/* First-time buyer answers: answer-first sections that search and AI tools can quote */
+.byline { margin-top: .8rem; font-size: .95rem; opacity: .85; max-width: 70ch; }
+.answers h2 { scroll-margin-top: 7rem; }
+.answers h2:first-child { margin-top: 0; }
+.steps { padding-left: 1.4rem; margin: 0; display: grid; gap: .7rem; }
+.steps li::marker { color: var(--brass); font-weight: 700; }

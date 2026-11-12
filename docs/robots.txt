@@ -1,4 +1,21 @@
+# Search engines and AI answer engines are welcome to read and cite this site.
 User-agent: *
+Allow: /
+
+# Named explicitly so AI search tools know they may crawl and quote these pages.
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: Google-Extended
+User-agent: Applebot
+User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://casanovanjpa.com/sitemap.xml

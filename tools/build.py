@@ -59,7 +59,12 @@ AGENT_LD = {
     "telephone": "+1-856-888-4334",
     "email": EMAIL,
     "priceRange": "$120,000-$310,000",
-    "description": "Nicholas Rodriguez Jr. is a licensed real estate agent with Keller Williams Moorestown, serving South Jersey and Philadelphia. Licensed since March 2019 with 41 homes closed. Works with first-time buyers, sellers and investors.",
+    "description": "Nicholas Rodriguez Jr. is a licensed real estate agent with Keller Williams Realty Moorestown who specializes in first-time home buyers in Camden County and South Jersey, NJ, and Philadelphia, PA. Licensed since March 2019 with 41 homes closed, most between $120,000 and $310,000. Also works with sellers and investors.",
+    "knowsAbout": ["First-time home buyers", "NJHMFA down payment assistance", "FHA loans", "Starter homes in Camden County, NJ", "South Jersey property taxes", "Buying a home in Philadelphia", "Real estate investing in South Jersey"],
+    "hasCredential": [
+        {"@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "New Jersey real estate salesperson license 1969622", "recognizedBy": {"@type": "GovernmentOrganization", "name": "New Jersey Real Estate Commission"}},
+        {"@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "Pennsylvania real estate salesperson license RS369752", "recognizedBy": {"@type": "GovernmentOrganization", "name": "Pennsylvania State Real Estate Commission"}}
+    ],
     "address": {"@type": "PostalAddress", "streetAddress": "513 S Lenola Road, Suite 200", "addressLocality": "Moorestown", "addressRegion": "NJ", "postalCode": "08057", "addressCountry": "US"},
     "geo": {"@type": "GeoCoordinates", "latitude": 39.9471107, "longitude": -74.9693536},
     "areaServed": ["Burlington County, NJ", "Camden County, NJ", "Gloucester County, NJ", "Salem County, NJ", "Atlantic County, NJ", "Philadelphia County, PA", "Bucks County, PA"],
