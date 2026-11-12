@@ -38,11 +38,11 @@ NAV = [
 ]
 
 SOCIAL = [
-    ("Facebook", "https://www.facebook.com/CasanovaRealEstateLLC/"),
+    ("Facebook", "https://www.facebook.com/theCasanovagroup"),
     ("YouTube", "https://www.youtube.com/@CASANOVA_TOURS"),
     ("Instagram", "https://www.instagram.com/_realestatetours/"),
     ("TikTok", "https://www.tiktok.com/@realestatetours"),
-    ("LinkedIn", "https://www.linkedin.com/in/rodriguezrealestate3/"),
+    ("LinkedIn", "https://www.linkedin.com/in/casanovarealestate/"),
     ("Zillow", "https://www.zillow.com/profile/CasanovaRealestate"),
 ]
 
